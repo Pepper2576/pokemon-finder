@@ -5,7 +5,7 @@ const h1PokeName = document.querySelector('#poke-title');
 
 btn.addEventListener('click', () => {
   let name = pokeName.value.toLowerCase();
-
+  name = name.replace(/ /g, '-');
   getPokemon(name);
 });
 
@@ -19,7 +19,7 @@ async function getPokemon(name) {
 
     const data = await res.json();
 
-    h1PokeName.innerHTML = data.species.name.toUpperCase();
+    h1PokeName.innerHTML = data.species.name;
     pokeImg.src = data.sprites.front_default;
   } catch (error) {
     console.error(error);

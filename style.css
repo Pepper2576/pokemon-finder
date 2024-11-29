@@ -1,0 +1,22 @@
+.title {
+  text-transform: capitalize;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em;
+  width: 25%;
+}
+.input-container > label,
+input,
+#sub {
+  margin: 0.5em;
+}
+.output-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
